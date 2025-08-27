@@ -228,7 +228,7 @@ const model = (() => {
     isPaginated: true,
   };
   let currentPage = 1;
-  const itemsPerPage = 4;
+  const itemsPerPage = 8;
 
   const getContinents = () => {
     const continents = new Set(imagesData.map((img) => img.continent));
