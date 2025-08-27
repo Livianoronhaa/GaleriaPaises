@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Países e Continentes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Galeria de Países</h1>
+    <p>Explore o mundo por continentes e países</p>
+  </header>
+
+  <div class="container">
+    <div class="controls">
+      <div id="continent-buttons" class="category-buttons">
+      </div>
+      <div id="country-buttons" class="category-buttons" style="display: none;">
+      </div>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Buscar país...">
+      </div>
+    </div>
+
+    <div id="gallery-container" class="gallery"></div>
+
+    <div id="pagination-container" class="pagination"></div>
+  </div>
+
+  <div id="image-modal" class="modal">
+    <div class="modal-content-wrapper"> <span class="close-btn">&times;</span>
+      <img class="modal-content" id="expanded-image">
+      <div id="image-caption" class="caption"></div>
+    </div>
+  </div>
+
+  <script src="js/model.js"></script>
+  <script src="js/view.js"></script>
+  <script src="js/controller.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
