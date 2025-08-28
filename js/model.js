@@ -1,5 +1,4 @@
 const model = (() => {
-  // Dados de exemplo. Na vida real, isso viria de uma API.
   const imagesData = [
     {
       id: 1,
@@ -17,7 +16,7 @@ const model = (() => {
     },
     {
       id: 3,
-      title: 'Praia',
+      title: 'Maceió - Alagoas',
       country: 'Brasil',
       continent: 'América do Sul',
       url: 'img/brasil2.jpg',
@@ -85,26 +84,13 @@ const model = (() => {
       continent: 'América do Sul',
       url: 'img/venezuela1.webp',
     },
-    {
-      id: 13,
-      title: 'Cataratas Angel',
-      country: 'Venezuela',
-      continent: 'América do Sul',
-      url: 'img/america-do-sul-venezuela-1.jpg',
-    },
-    {
-      id: 14,
-      title: 'Deserto do Atacama',
-      country: 'Chile',
-      continent: 'América do Sul',
-      url: 'img/america-do-sul-chile-1.jpg',
-    },
+
     {
       id: 15,
       title: 'Chirchill',
       country: 'Canadá',
       continent: 'América do Norte',
-      url: 'img/canada1.png',
+      url: 'img/canada.webp',
     },
     {
       id: 16,
@@ -211,14 +197,6 @@ const model = (() => {
       continent: 'Oceania',
       url: 'img/pohnpei.webp',
     },
-    {
-      id: 31,
-      title: 'Nome aqui',
-      country: 'País aqui',
-      continent: 'Ásia',
-      url: 'img/oceania-australia-1.jpg',
-    },
-    
   ];
 
   let currentFilter = {

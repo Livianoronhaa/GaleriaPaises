@@ -53,9 +53,7 @@ const controller = ((model, view) => {
     updateView();
   };
 
-  // Novo callback para o clique na imagem
   const onImageClick = (imageUrl, title, country, continent) => {
-    // Pede à View para exibir a imagem no modal
     view.showExpandedImage(imageUrl, title, country, continent);
   };
 
@@ -65,7 +63,7 @@ const controller = ((model, view) => {
       onCountryFilter,
       onSearch,
       onPageChange,
-      onImageClick, // Adiciona o novo callback
+      onImageClick,
     });
 
     updateView();

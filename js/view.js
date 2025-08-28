@@ -6,18 +6,16 @@ const view = (() => {
   const searchInput = document.getElementById('search-input');
   const paginationContainer = document.getElementById('pagination-container');
 
-  // Novos elementos do modal
+
   const modal = document.getElementById('image-modal');
   const modalImage = document.getElementById('expanded-image');
   const modalCaption = document.getElementById('image-caption');
   const closeBtn = document.getElementsByClassName('close-btn')[0];
 
   const renderImages = (images) => {
-    // Efeito de fade out
     galleryContainer.style.opacity = 0;
     galleryContainer.style.transform = 'scale(0.98)';
 
-    // Espera a transição terminar antes de renderizar novas imagens
     setTimeout(() => {
       galleryContainer.innerHTML = '';
       images.forEach((image) => {
@@ -33,22 +31,19 @@ const view = (() => {
         `;
         galleryContainer.appendChild(galleryItem);
 
-        // Efeito de fade in
         setTimeout(() => galleryItem.classList.add('show'), 50);
       });
       galleryContainer.style.opacity = 1;
       galleryContainer.style.transform = 'scale(1)';
-    }, 300); // tempo de espera da transição
+    }, 300);
   };
 
   const renderContinentButtons = (continents, activeContinent) => {
-    // Limpa o container antes de renderizar para evitar duplicações
     continentButtonsContainer.innerHTML = '';
 
     continents.forEach((continent) => {
       const btn = document.createElement('button');
 
-      // Define o texto do botão com base no valor do filtro
       const buttonText = continent === 'all' ? 'Todos' : continent;
 
       btn.className = `filter-btn ${
@@ -68,7 +63,7 @@ const view = (() => {
     }
 
     countryButtonsContainer.style.display = 'flex';
-    countryButtonsContainer.innerHTML = ''; // Limpa o container
+    countryButtonsContainer.innerHTML = '';
 
     countries.forEach((country) => {
       const btn = document.createElement('button');
@@ -94,7 +89,7 @@ const view = (() => {
     }
   };
 
-  // Função para exibir a imagem expandida no modal
+  //imagem expandida
   const showExpandedImage = (imageUrl, title, country, continent) => {
     modal.style.display = 'block';
     modalImage.src = imageUrl;
@@ -127,7 +122,7 @@ const view = (() => {
       }
     });
 
-    // Listener para abrir o modal ao clicar em uma imagem
+    // abrir o modal de imagem
     galleryContainer.addEventListener('click', (e) => {
       const item = e.target.closest('.gallery-item');
       if (item) {
@@ -145,7 +140,7 @@ const view = (() => {
       }
     });
 
-    // Listener para fechar o modal
+    // fechar o modal
     closeBtn.addEventListener('click', () => {
       modal.style.display = 'none';
     });
